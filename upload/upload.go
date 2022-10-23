@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -18,6 +19,8 @@ func main() {
 	// Import API KEY from .env file
 	API_KEY := os.Getenv("API_KEY")
 
+	const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
+
 	// Load file
 	data, err := ioutil.ReadFile("record1.m4a")
 
@@ -27,4 +30,6 @@ func main() {
 
 	// Setup HTTP client and set header
 	client := http.Client{}
+
+	req, _ := http.NewRequest("POST", UPLOAD_URL, bytes.NewBuffer(data))
 }
