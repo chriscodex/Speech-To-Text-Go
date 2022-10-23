@@ -3,6 +3,7 @@ package main
 import (
 	"io/ioutil"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -23,4 +24,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// Setup HTTP client and set header
+	client := http.Client{}
 }
