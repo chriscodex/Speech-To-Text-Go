@@ -35,5 +35,10 @@ func main() {
 
 	req.Header.Set("authorization", API_KEY)
 
+	// Request
 	res, err := client.Do(req)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 }
