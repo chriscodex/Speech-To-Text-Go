@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -46,4 +47,7 @@ func main() {
 	// decode json and store it in a map
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
+
+	// Print the upload_url
+	fmt.Println(result["upload_url"])
 }
