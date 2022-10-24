@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -41,4 +42,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// decode json and store it in a map
+	var result map[string]interface{}
+	json.NewDecoder(res.Body).Decode(&result)
 }
