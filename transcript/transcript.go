@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"log"
+	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -24,4 +25,5 @@ func main() {
 	values := map[string]string{"audio_url": AUDIO_URL}
 	jsonData, _ := json.Marshal(values)
 
+	client := &http.Client{}
 }
