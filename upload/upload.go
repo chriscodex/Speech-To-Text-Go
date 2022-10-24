@@ -34,4 +34,6 @@ func main() {
 	req, _ := http.NewRequest("POST", UPLOAD_URL, bytes.NewBuffer(data))
 
 	req.Header.Set("authorization", API_KEY)
+
+	res, err := client.Do(req)
 }
