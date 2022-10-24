@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"os"
 
@@ -18,5 +19,9 @@ func main() {
 
 	const AUDIO_URL = ""
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
+
+	// Prepare json data
+	values := map[string]string{"audio_url": AUDIO_URL}
+	jsonData, _ := json.Marshal(values)
 
 }
