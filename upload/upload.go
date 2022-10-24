@@ -24,7 +24,7 @@ func main() {
 	const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
 
 	// Load file
-	data, err := ioutil.ReadFile("record1.m4a")
+	data, err := ioutil.ReadFile("upload/audio/record1.m4a")
 
 	if err != nil {
 		log.Fatal(err)
