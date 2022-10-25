@@ -35,4 +35,8 @@ func main() {
 
 	defer res.Body.Close()
 
+	// Decode json and store it in a map
+	var result map[string]interface{}
+	json.NewDecoder(res.Body).Decode(&result)
+
 }
