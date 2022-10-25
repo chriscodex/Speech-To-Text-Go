@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -39,4 +40,7 @@ func main() {
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
 
+	if result["status"] == "completed" {
+		fmt.Println(result["text"])
+	}
 }
