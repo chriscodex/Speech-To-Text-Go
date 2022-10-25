@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -26,4 +27,6 @@ func main() {
 	jsonData, _ := json.Marshal(values)
 
 	client := &http.Client{}
+	req, _ := http.NewRequest("POST", TRANSCRIPT_URL, bytes.NewBuffer(jsonData))
+
 }
