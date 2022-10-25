@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -39,4 +40,6 @@ func main() {
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
 
+	// Print the id of the transcribed audio
+	fmt.Println(result["id"])
 }
