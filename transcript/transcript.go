@@ -31,4 +31,8 @@ func main() {
 	req.Header.Set("content-type", "application/json")
 	req.Header.Set("authorization", API_KEY)
 
+	res, _ := client.Do(req)
+
+	defer res.Body.Close()
+
 }
