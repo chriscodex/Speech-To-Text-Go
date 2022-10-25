@@ -20,7 +20,7 @@ func main() {
 	// Import API KEY from .env file
 	API_KEY := os.Getenv("API_KEY")
 
-	const AUDIO_URL = ""
+	const AUDIO_URL = "https://cdn.assemblyai.com/upload/019c9d26-42fe-4efa-8264-f84b7ae1df26"
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
 	// Prepare json data
