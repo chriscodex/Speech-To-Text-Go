@@ -28,5 +28,6 @@ func main() {
 
 	client := &http.Client{}
 	req, _ := http.NewRequest("POST", TRANSCRIPT_URL, bytes.NewBuffer(jsonData))
+	req.Header.Set("content-type", "application/json")
 
 }
