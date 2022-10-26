@@ -32,7 +32,10 @@ func main() {
 	req.Header.Set("content-type", "application/json")
 	req.Header.Set("authorization", API_KEY)
 
-	res, _ := client.Do(req)
+	res, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	defer res.Body.Close()
 
