@@ -25,4 +25,5 @@ func main() {
 
 	req, _ := http.NewRequest("GET", POLLING_URL, nil)
 	req.Header.Set("content-type", "application/json")
+	req.Header.Set("authorization", API_KEY)
 }
