@@ -23,4 +23,5 @@ func main() {
 
 	client := &http.Client{}
 
+	req, _ := http.NewRequest("GET", POLLING_URL, nil)
 }
