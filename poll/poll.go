@@ -15,4 +15,6 @@ func main() {
 
 	// Import API KEY from .env file
 	API_KEY := os.Getenv("API_KEY")
+
+	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 }
