@@ -17,4 +17,5 @@ func main() {
 	API_KEY := os.Getenv("API_KEY")
 
 	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
+	const TRANSCRIPT_ID = "r427robbnf-6649-4765-b5db-c0ef3fb13d7f"
 }
