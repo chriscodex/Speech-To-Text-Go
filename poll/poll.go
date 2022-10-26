@@ -24,4 +24,5 @@ func main() {
 	client := &http.Client{}
 
 	req, _ := http.NewRequest("GET", POLLING_URL, nil)
+	req.Header.Set("content-type", "application/json")
 }
