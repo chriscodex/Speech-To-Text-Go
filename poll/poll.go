@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 	"os"
@@ -33,5 +34,9 @@ func main() {
 		log.Fatal(err)
 	}
 	defer res.Body.Close()
+
+	// Decode
+	var result map[string]interface{}
+	json.NewDecoder(res.Body).Decode(&result)
 
 }
