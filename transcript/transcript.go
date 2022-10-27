@@ -1,9 +1,8 @@
-package main
+package transcript
 
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -11,7 +10,9 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func main() {
+const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
+
+func GetIdTranscription(audioURL string) interface{} {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -20,11 +21,8 @@ func main() {
 	// Import API KEY from .env file
 	API_KEY := os.Getenv("API_KEY")
 
-	const AUDIO_URL = "https://cdn.assemblyai.com/upload/019c9d26-42fe-4efa-8264-f84b7ae1df26"
-	const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
-
 	// Prepare json data
-	values := map[string]string{"audio_url": AUDIO_URL}
+	values := map[string]string{"audio_url": audioURL}
 	jsonData, _ := json.Marshal(values)
 
 	client := &http.Client{}
@@ -43,6 +41,5 @@ func main() {
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
 
-	// Print the id of the transcribed audio
-	fmt.Println(result["id"])
+	return result["id"]
 }
