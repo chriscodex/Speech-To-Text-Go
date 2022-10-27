@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// Get Upload URL of audio
 	uploadURL := upload.GetUploadURL()
 	fmt.Println(uploadURL)
 }
