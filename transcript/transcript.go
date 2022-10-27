@@ -12,7 +12,7 @@ import (
 
 const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
-func GetIdTranscription(audioURL string) interface{} {
+func GetIdTranscription(audioURL string) string {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -41,5 +41,5 @@ func GetIdTranscription(audioURL string) interface{} {
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
 
-	return result["id"]
+	return result["id"].(string)
 }
