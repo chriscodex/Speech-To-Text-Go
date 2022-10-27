@@ -2,7 +2,6 @@ package poll
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -12,7 +11,7 @@ import (
 
 const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
-func GetTextTranscripted(idTranscript string) interface{} {
+func GetTextTranscripted(idTranscript string) string {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -42,8 +41,8 @@ func GetTextTranscripted(idTranscript string) interface{} {
 	json.NewDecoder(res.Body).Decode(&result)
 
 	if result["status"] == "completed" {
-		fmt.Println(result["text"])
-		return result["text"]
+		return result["text"].(string)
 	}
-	return nil
+
+	return ""
 }
