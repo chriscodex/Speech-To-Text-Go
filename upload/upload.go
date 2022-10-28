@@ -1,9 +1,8 @@
-package main
+package upload
 
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -12,7 +11,9 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func main() {
+const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
+
+func GetUploadURL() string {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -20,8 +21,6 @@ func main() {
 
 	// Import API KEY from .env file
 	API_KEY := os.Getenv("API_KEY")
-
-	const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
 
 	// Load file
 	data, err := ioutil.ReadFile("upload/audio/record1.m4a")
@@ -48,6 +47,6 @@ func main() {
 	var result map[string]interface{}
 	json.NewDecoder(res.Body).Decode(&result)
 
-	// Print the upload_url
-	fmt.Println(result["upload_url"])
+	// Return the upload_url
+	return result["upload_url"].(string)
 }
