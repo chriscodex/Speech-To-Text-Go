@@ -12,7 +12,7 @@ import (
 
 const TRANSCRIPT_URL = "https://api.assemblyai.com/v2/transcript"
 
-func GetText(idTranscript string) interface{} {
+func GetTextTranscripted(idTranscript string) interface{} {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
