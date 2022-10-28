@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/ChrisCodeX/Speech-To-Text-Go.git/poll"
 	"github.com/ChrisCodeX/Speech-To-Text-Go.git/transcript"
@@ -16,6 +17,8 @@ func main() {
 	// Get the Id of transcription
 	transcriptId := transcript.GetIdTranscription(uploadURL)
 	fmt.Println(transcriptId)
+
+	time.Sleep(10 * time.Second)
 
 	// Get text transcripted
 	textTranscripted := poll.GetTextTranscripted(transcriptId)
