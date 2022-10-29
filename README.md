@@ -21,5 +21,5 @@ To have access to the API key that AssemblyAI provides for free, it is only nece
 ```
 go mod tidy
 ```
-
+- Create the .env file in the "/" path of the project and include the API key provided by AssemblyAI as follows:
 ---  
