@@ -29,3 +29,7 @@ API_KEY=Your_api_key
 
 ## **Conversion** :desktop_computer: 
 To convert your audio to text, add your audio to the "/upload/audio" folder, then in main.go modify these 2 variables with the data from your uploaded file:
+```
+const timeToWait = 10
+const audioName = "record1.m4a"
+```
