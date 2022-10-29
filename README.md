@@ -17,6 +17,9 @@ To have access to the API key that AssemblyAI provides for free, it is only nece
 ---
 
 ## **Installation** 🔧 
-- 
+- The project uses external dependencies, so once the project is cloned you must run the command:
+```
+go mod tidy
+```
 
 ---  
