@@ -33,3 +33,4 @@ To convert your audio to text, add your audio to the "/upload/audio" folder, the
 const timeToWait = 10
 const audioName = "record1.m4a"
 ```
+Note: 
