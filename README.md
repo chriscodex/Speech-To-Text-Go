@@ -13,4 +13,10 @@ This repository contains a speech-to-text audio converter in English, using the 
 ---
 ## **Pre-Requirements** 📋  
 To have access to the API key that AssemblyAI provides for free, it is only necessary to register and the key will be generated automatically. You can do it from this link.
+
 ---
+
+## **Installation** 🔧 
+- 
+
+---  
