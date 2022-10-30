@@ -37,3 +37,5 @@ Note:
 - timeToWait is the waiting time for the API to do the conversion, usually it is 30% of the total duration of the audio, so modify it according to the duration of your audio.
 - audioName is the name of your audio, you should consider putting the format of your audio.
 Supported formats: .3ga, .8svx, .aac, .ac3, .aif, .aiff, .alac, .amr, .ape, .au, .dss, .flac, .flv, .m4a, .m4b, .m4p, .m4r, .mp3, .mpga, .ogg, .oga, .mogg, .opus, .qcp, .tta, .voc, .wav, .wma, .wv
+
+---
