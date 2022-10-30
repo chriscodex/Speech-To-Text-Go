@@ -35,3 +35,4 @@ const audioName = "record1.m4a"
 ```
 Note: 
 - timeToWait is the waiting time for the API to do the conversion, usually it is 30% of the total duration of the audio, so modify it according to the duration of your audio.
+- audioName is the name of your audio, you should consider putting the format of your audio.
