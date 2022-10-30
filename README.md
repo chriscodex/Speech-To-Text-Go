@@ -42,3 +42,4 @@ Supported formats: .3ga, .8svx, .aac, .ac3, .aif, .aiff, .alac, .amr, .ape, .au,
 
 ## Built with 🛠️ 
 - AssemblyAI - API converter
+- Godotenv - Getting Environment Variables
