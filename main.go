@@ -10,10 +10,11 @@ import (
 )
 
 const timeToWait = 10
+const audioName = "record1.m4a"
 
 func main() {
 	// Get Upload URL of audio
-	uploadURL := upload.GetUploadURL()
+	uploadURL := upload.GetUploadURL(audioName)
 	fmt.Println(uploadURL)
 
 	// Get the Id of transcription
