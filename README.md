@@ -41,4 +41,4 @@ Supported formats: .3ga, .8svx, .aac, .ac3, .aif, .aiff, .alac, .amr, .ape, .au,
 ---
 
 ## Built with 🛠️ 
-- AssemblyAI - API conversor
+- AssemblyAI - API converter
