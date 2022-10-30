@@ -9,6 +9,8 @@ import (
 	"github.com/ChrisCodeX/Speech-To-Text-Go.git/upload"
 )
 
+const timeToWait = 10
+
 func main() {
 	// Get Upload URL of audio
 	uploadURL := upload.GetUploadURL()
@@ -18,7 +20,7 @@ func main() {
 	transcriptId := transcript.GetIdTranscription(uploadURL)
 	fmt.Println(transcriptId)
 
-	time.Sleep(10 * time.Second)
+	time.Sleep(timeToWait * time.Second)
 
 	// Get text transcripted
 	textTranscripted := poll.GetTextTranscripted(transcriptId)
