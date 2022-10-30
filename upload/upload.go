@@ -13,7 +13,7 @@ import (
 
 const UPLOAD_URL = "https://api.assemblyai.com/v2/upload"
 
-func GetUploadURL() string {
+func GetUploadURL(audioName string) string {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
@@ -23,7 +23,8 @@ func GetUploadURL() string {
 	API_KEY := os.Getenv("API_KEY")
 
 	// Load file
-	data, err := ioutil.ReadFile("upload/audio/record1.m4a")
+	nameAudio := "upload/audio/" + audioName
+	data, err := ioutil.ReadFile(nameAudio)
 
 	if err != nil {
 		log.Fatal(err)
