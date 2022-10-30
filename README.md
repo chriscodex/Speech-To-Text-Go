@@ -7,8 +7,8 @@ This repository contains a speech-to-text audio converter in English, using the 
 ## **Table of Contents** 📖  
 1. [Pre-Requirements](#pre-requirements-)
 2. [Installation](#installation-)
-3. [HTTP Endpoints](#http-endpoints-desktop_computer)
-4. [WebSocket](#websocket-)
+3. [Conversion](#Conversion-desktop_computer)
+4. [Built with](#websocket-)
 
 ---
 ## **Pre-Requirements** 📋  
