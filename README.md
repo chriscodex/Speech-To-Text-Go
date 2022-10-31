@@ -41,5 +41,5 @@ Supported formats: .3ga, .8svx, .aac, .ac3, .aif, .aiff, .alac, .amr, .ape, .au,
 ---
 
 ## Built with 🛠️ 
-- [AssemblyAI](https://pkg.go.dev/github.com/joho/godotenv#section-readme) - API converter
-- Godotenv - Getting Environment Variables
+- [AssemblyAI](https://www.assemblyai.com/) - API converter
+- [Godotenv](https://pkg.go.dev/github.com/joho/godotenv#section-readme) - Getting Environment Variables
