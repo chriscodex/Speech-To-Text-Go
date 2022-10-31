@@ -8,7 +8,7 @@ This repository contains a speech-to-text audio converter in English, using the 
 1. [Pre-Requirements](#pre-requirements-)
 2. [Installation](#installation-)
 3. [Conversion](#Conversion-desktop_computer)
-4. [Built with](##built-with-%EF%B8%8F)
+4. [Built with](#built-with-%EF%B8%8F)
 
 ---
 ## **Pre-Requirements** 📋  
